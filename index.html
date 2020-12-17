@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugin practice</title>
+</head>
+<style>
+    html{
+        font-size: 62.5%;
+    }
+
+    *{
+        box-sizing: border-box;
+    }
+    .container {
+        background-image: linear-gradient(to bottom right, #66ff66, rgb(118, 219, 151));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        height: 100vh;
+    }
+    .container__info {
+        background-color: #fff;
+        width: 61.8%;
+        height:61.8%;
+        border-radius: .618rem;
+        box-shadow: 0 1.618rem 1.618rem rgba(0,0,0, .6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container__info-display {
+        width:100%;
+        height:61.8%;
+        padding: 5rem;
+        background-color: #eee;
+        margin-bottom: 3.14rem;
+    }
+    .container__info-btn{
+        transition:all 300ms;
+    }
+    .container__info-btn:hover{
+        background-color: #66ff66;
+        transform: scale(1.2);
+        box-shadow: 0 1.618rem 1.618rem rgba(0,0,0, .6);
+    }
+    .container__info-btn:active {
+        transform: scale(1);
+    }
+    .container__info-display-header{
+        font-size: 3rem;
+        color: #0a960a;
+
+    }
+    .container__info-display-text{
+        font-size: 1.618rem;
+    }
+
+
+</style>
+<body>
+
+    <section class="container">
+        <div class="container__info">
+            <div id="display" class="container__info-display">
+                <h3 class="container__info-display-header">Your Plugins are &rarr;</h3>
+                <p id="display-text"class="container__info-display-text"></p>
+            </div>
+            <button id="btn" onclick="displayPlugins()" class="container__info-btn">Press me</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
